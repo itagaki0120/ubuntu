@@ -69,8 +69,25 @@ try {
                 </table>
             </div>
             <div class="tab-pane" id="insert">
-                <p>insert</p>
+                <form action="./insert.php" method="post">
+                <div class="form-group row">
+                            <label for="id" class="form-control">
+                <input type="text" class="form-control" id="id" name="id">
+                </div>
+                <div class="form-group row">
+                            <label for="name" class="form-control">
+                <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="form-group row">
+                            <label for="age" class="form-control">
+                <input type="text" class="form-control" id="age" name="age">
+                </div>
+                <div class="form-group row">
+                            <label for="id" class="form-control">
+                <input type="submit" class="form-control" value="insert">
+                </div>
             </div>
+            
             <div class="tab-pane" id="delete">
                 <p>delete</p>
             </div>
