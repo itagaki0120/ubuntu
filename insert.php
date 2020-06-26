@@ -4,7 +4,7 @@ $user = 'itagakidaiki';
 $password = 'morijyobi';
 try {
         $dbh = new PDO($dsn, $user, $password);
-        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION)
+        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
         $id = $_POST['id'];
         $name = $_POST['name'];
