@@ -1,11 +1,11 @@
 <?php
 $dsn = 'mysql:dbname=sample_db;host=localhost;';
-$user = 'daiki';
-$password = 'Itagaki0120!';
+$user = 'itagakidaiki';
+$password = 'morijyobi';
 try {
     $dbh = new PDO($dsn, $user, $password);
         print "Success\n";
-        $sql = "select * from sample;";
+        $sql = "select * from user;";
         $result = $dbh->query($sql);
     } catch (PDOException $e) {
         print "Failed: " . $e->getMessage() . "\n";
@@ -60,9 +60,9 @@ try {
                     <tbody class="table">
                         <?php foreach($result as $Value){?>
                         <tr>
-                            <td><?php echo '$Value[id]';?></td>
-                            <td><?php echo '$Value[name]';?></td>
-                            <td><?php echo '$Value[age]';?></td>
+                            <td><?php echo "$Value[id]";?></td>
+                            <td><?php echo "$Value[name]";?></td>
+                            <td><?php echo "$Value[age]";?></td>
                         </tr>
                         <?php } ?>
                     </tbody>
