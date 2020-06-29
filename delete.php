@@ -9,7 +9,7 @@ try {
         $id = $_GET['id'];
 
         $sql = "delete from user where id=:id";
-        $stmt=$dbh->prepare($sql);
+        $stmt=$dbh->prepare($sql,);
         $prams=array(':id'=>$id);
         $stmt->execute($prams);
 

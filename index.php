@@ -111,7 +111,7 @@ try {
                             <td><?php echo "$Value[id]";?></td>
                             <td><?php echo "$Value[name]";?></td>
                             <td><?php echo "$Value[age]";?></td>
-                            <td><form action="./delete" method="get"><input class="d-none" type="text" name="id" value="<?php echo "$Value[id]"; ?>"><button class="btn btn-denger" type="submit"></button></td>
+                            <td><form action="./delete" method="get"><input class="d-none" type="text" name="id" value="<?php echo "$Value[id]"; ?>"><button class="btn btn-dark" type="submit" value="Delete"></button></td>
                         </tr>
                         <?php } ?>
                     </tbody>
