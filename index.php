@@ -6,6 +6,7 @@ try {
     $dbh = new PDO($dsn, $user, $password);
         $sql = "select * from user;";
         $result = $dbh->query($sql);
+        $result2 = $dbh->query($sql);
     } catch (PDOException $e) {
         print "Failed: " . $e->getMessage() . "\n";
         exit();
@@ -94,7 +95,27 @@ try {
 			</div>
             
             <div class="tab-pane" id="delete">
-                <p>delete</p>
+            <table class="table">
+                    <caption>Show User Table</caption>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>id</th>
+                            <th>name</th>
+                            <th>Age</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table">
+                        <?php foreach($result2 as $Value){?>
+                        <tr>
+                            <td><?php echo "$Value[id]";?></td>
+                            <td><?php echo "$Value[name]";?></td>
+                            <td><?php echo "$Value[age]";?></td>
+                            <td><form action="./delete" method="get"><input class="d-none" type="text" name="id" value="<?php echo "$Value[id]"; ?>"><button class="btn btn-denger" type="submit"></button></td>
+                        </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
             </div>
             <div class="tab-pane" id="update">
             <form class="mt-3" action="./update.php" method="POST">
