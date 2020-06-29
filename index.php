@@ -38,6 +38,12 @@ try {
             </p>
         </div>
     </div>
+    <?php if($_GET['fg'] == 1){ ?>
+    <p>Sucess</p>
+    <?php } ?>
+    <?php else if($_GET['fg'] == 2){ ?>
+    <p>feild</p>
+    <?php } ?>
     <div class="container">
         <ul class="nav nav-tabs">
             <li class="nav-item"><a href="#select" class="nav-link active" data-toggle="tab">select</a></li>
@@ -111,7 +117,7 @@ try {
                             <td><?php echo "$Value[id]";?></td>
                             <td><?php echo "$Value[name]";?></td>
                             <td><?php echo "$Value[age]";?></td>
-                            <td><form action="./delete" method="get"><input class="d-none" type="text" name="id" value="<?php echo "$Value[id]"; ?>"><button class="btn btn-dark" type="submit" value="Delete"></button></td>
+                            <td><form action="./delete.php" method="get"><input class="d-none" type="text" name="id" value="<?php echo "$Value[id]"; ?>"><button class="btn btn-danger" type="submit" value="Delete"></button></td>
                         </tr>
                         <?php } ?>
                     </tbody>
